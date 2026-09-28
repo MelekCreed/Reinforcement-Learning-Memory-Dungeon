@@ -1,0 +1,8 @@
+# Exact versions used for the recorded CPU experiments (Python 3.13).
+torch==2.10.0
+numpy==2.3.5
+networkx==3.5
+matplotlib==3.10.7
+streamlit==1.56.0
+pandas==2.3.3
+pytest==9.1.1
