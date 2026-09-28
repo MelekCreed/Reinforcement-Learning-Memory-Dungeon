@@ -1,0 +1,28 @@
+{
+  "seed": 42,
+  "config": {
+    "updates": 2,
+    "batch_size": 16,
+    "policy": {
+      "hidden": 64,
+      "history": 4
+    },
+    "environment": {
+      "size": 5,
+      "rooms": 8,
+      "keys": 1,
+      "max_steps": 96,
+      "mode": "procedural",
+      "dependency": 8
+    },
+    "ppo": {
+      "epochs": 3,
+      "learning_rate": 0.0007
+    }
+  },
+  "agent": "lstm",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.3.5",
+  "device": "cpu",
+  "training_split": "train"
+}

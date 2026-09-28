@@ -1,4 +1,5 @@
 import torch
+import numpy as np
 from agents.encoders import policy_input
 from dungeon.environment import DungeonEnv
 from .buffer import Rollout
@@ -16,7 +17,7 @@ def collect(policy, config, episode_seeds, rewards=None):
         if not active.any():
             break
         x = torch.stack([policy_input(o,a) for o,a in zip(obs, previous)]).to(device)
-        masks = torch.tensor(__import__('numpy').stack([o.action_mask() for o in obs]), device=device)
+        masks = torch.tensor(np.stack([o.action_mask() for o in obs]), device=device)
         logits, values, state = policy(x.unsqueeze(0), state)
         dist = policy.distribution(logits[0], masks)
         actions = dist.sample()

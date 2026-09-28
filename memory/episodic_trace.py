@@ -8,6 +8,7 @@ class EpisodicTrace:
         self.position = (0,0)
         self.events = []
         self.claims = []
+        self.observed_keys = {}
         self._seen = set()
 
     def update(self, obs, step, previous_action=None, previous_obs=None):
@@ -27,6 +28,7 @@ class EpisodicTrace:
             if 2 <= p <= 5:
                 event("door", f"{COLORS[p-2].upper()} DOOR discovered to the {DIRECTIONS[i]}", ("door",self.position,i))
         for color in obs.keys:
+            self.observed_keys[color] = obs.room
             event("key", f"{COLORS[color].upper()} KEY observed in {ROOMS[obs.room]}", ("key",color))
             for c,room in self.claims:
                 if c == color and room != obs.room:
@@ -37,6 +39,9 @@ class EpisodicTrace:
             event("clue", f"Unverified: {COLORS[obs.clue[0]]} key in {ROOMS[obs.clue[1]]}", ("clue",self.position))
             if obs.clue not in self.claims:
                 self.claims.append(obs.clue)
+            c,room = obs.clue
+            if c in self.observed_keys and self.observed_keys[c] != room:
+                event("contradiction", f"Note naming {ROOMS[room]} contradicts the observed {COLORS[c]} key location", ("contradiction",c,room))
         if obs.cue is not None:
             event("cue", f"One-time seal: {['RAVEN','MOON'][obs.cue]}", ("cue",))
         if obs.seal:

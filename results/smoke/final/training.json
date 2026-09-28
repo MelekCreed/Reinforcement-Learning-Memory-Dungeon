@@ -1,0 +1,19 @@
+[
+  {
+    "loss": 2.761817693710327,
+    "policy_loss": -0.0005358179332688451,
+    "value_loss": 5.538163185119629,
+    "entropy": 0.6728076338768005,
+    "gradient_norm": 1.1890127658843994,
+    "approx_kl": 1.980568777071312e-05,
+    "update": 1,
+    "timesteps": 1122,
+    "reward": 4.5112499999999995,
+    "success": 0.4375,
+    "dependency": 8,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 61.0625,
+    "mean_immediate_backtracks": 38.75,
+    "mean_keys_per_step": 0.021764691712722776
+  }
+]

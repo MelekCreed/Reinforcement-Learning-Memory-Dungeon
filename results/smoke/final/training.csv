@@ -1,0 +1,2 @@
+loss,policy_loss,value_loss,entropy,gradient_norm,approx_kl,update,timesteps,reward,success,dependency,mean_invalid_actions,mean_repeated_visits,mean_immediate_backtracks,mean_keys_per_step
+2.761817693710327,-0.0005358179332688451,5.538163185119629,0.6728076338768005,1.1890127658843994,1.980568777071312e-05,1,1122,4.5112499999999995,0.4375,8,0.0,61.0625,38.75,0.021764691712722776

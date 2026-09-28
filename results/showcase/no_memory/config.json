@@ -1,0 +1,36 @@
+{
+  "seed": 42,
+  "config": {
+    "updates": 800,
+    "batch_size": 32,
+    "policy": {
+      "hidden": 64,
+      "history": 4
+    },
+    "environment": {
+      "size": 8,
+      "rooms": 17,
+      "keys": 1,
+      "max_steps": 80,
+      "mode": "showcase",
+      "dependency": 15
+    },
+    "curriculum": [
+      2,
+      4,
+      8,
+      15
+    ],
+    "ppo": {
+      "epochs": 4,
+      "learning_rate": 0.001,
+      "gamma": 0.995,
+      "gae_lambda": 0.98
+    }
+  },
+  "agent": "no_memory",
+  "torch": "2.10.0+cpu",
+  "numpy": "2.3.5",
+  "device": "cpu",
+  "training_split": "train"
+}

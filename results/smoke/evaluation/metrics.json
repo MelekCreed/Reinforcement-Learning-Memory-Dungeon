@@ -1,0 +1,79 @@
+{
+  "checkpoint": "C:\\Users\\moall\\Documents\\Codex\\2026-09-28\\files-pasted-by-the-user-build\\outputs\\dungeon-with-amnesia\\results\\smoke\\gru\\checkpoint.pt",
+  "environment": {
+    "size": 5,
+    "rooms": 8,
+    "keys": 1,
+    "clue_reliability": 0.75,
+    "max_steps": 96,
+    "mode": "procedural",
+    "dependency": 8
+  },
+  "split": "test",
+  "summary": {
+    "maps": 4,
+    "success_rate": 0.0,
+    "success_ci95_low": 0.0,
+    "success_ci95_high": 0.48990002040399916,
+    "mean_reward": -1.8650000000000007,
+    "steps_to_success": null,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 93.25,
+    "mean_immediate_backtracks": 92.75,
+    "mean_keys_per_step": 0.0078125
+  },
+  "episodes": [
+    {
+      "seed": 200000,
+      "success": false,
+      "reward": -1.600000000000002,
+      "steps": 96,
+      "steps_to_success": null,
+      "invalid_actions": 0,
+      "repeated_visits": 93,
+      "immediate_backtracks": 92,
+      "keys_collected": 1,
+      "keys_per_step": 0.010416666666666666,
+      "first_key_step": 3
+    },
+    {
+      "seed": 200001,
+      "success": false,
+      "reward": -2.639999999999997,
+      "steps": 96,
+      "steps_to_success": null,
+      "invalid_actions": 0,
+      "repeated_visits": 94,
+      "immediate_backtracks": 94,
+      "keys_collected": 0,
+      "keys_per_step": 0.0,
+      "first_key_step": null
+    },
+    {
+      "seed": 200002,
+      "success": false,
+      "reward": -1.720000000000002,
+      "steps": 96,
+      "steps_to_success": null,
+      "invalid_actions": 0,
+      "repeated_visits": 94,
+      "immediate_backtracks": 93,
+      "keys_collected": 1,
+      "keys_per_step": 0.010416666666666666,
+      "first_key_step": 2
+    },
+    {
+      "seed": 200003,
+      "success": false,
+      "reward": -1.5000000000000016,
+      "steps": 96,
+      "steps_to_success": null,
+      "invalid_actions": 0,
+      "repeated_visits": 92,
+      "immediate_backtracks": 92,
+      "keys_collected": 1,
+      "keys_per_step": 0.010416666666666666,
+      "first_key_step": 2
+    }
+  ]
+}

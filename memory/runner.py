@@ -60,8 +60,8 @@ class Session:
                 "timeline":self.timeline, "interventions":self.interventions,
                 "events":self.trace.events}
 
-def paired(policy, config, seed, at_step, kind="reset", **kwargs):
-    session = Session(policy,config,seed)
+def paired(policy, config, map_seed, at_step, kind="reset", **kwargs):
+    session = Session(policy,config,map_seed)
     while session.env.steps < at_step and not session.env.done:
         session.step()
     if session.env.done:

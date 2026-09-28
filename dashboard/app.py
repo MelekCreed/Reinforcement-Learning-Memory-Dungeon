@@ -185,6 +185,12 @@ with comparison:
         st.info("The no-memory agent has no retained state. These interventions cannot change its policy input.")
     if "pair" in st.session_state:
         pair = st.session_state.pair
+        edit = pair[1].interventions[-1] if pair[1].interventions else None
+        st.caption(f"Paired dungeon seed: {pair[0].env.seed} · intervention: {edit['kind']} after decision {edit['step']}" if edit else f"Paired dungeon seed: {pair[0].env.seed}")
+        st.dataframe(pd.DataFrame([{"Branch":label,"Outcome":"ESCAPED" if run.env.success else "FAILED",
+                                    "Decisions":run.env.steps,"Reward":round(run.env.total_reward,2)}
+                                   for label,run in zip(["Control · intact","Treatment · modified"],pair)]),
+                     hide_index=True,use_container_width=True)
         for col,label,run in zip(st.columns(2),["CONTROL · intact memory","TREATMENT · intervened memory"],pair):
             with col:
                 st.markdown(f"#### {label}")

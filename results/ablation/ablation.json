@@ -1,0 +1,162 @@
+[
+  {
+    "agent": "reset",
+    "strength": 0.25,
+    "maps": 100,
+    "success_rate": 0.43,
+    "success_ci95_low": 0.3373313900052838,
+    "success_ci95_high": 0.5278478830413564,
+    "mean_reward": 5.9200000000000035,
+    "steps_to_success": 34.0,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 15.0,
+    "mean_immediate_backtracks": 0.0,
+    "mean_keys_per_step": 0.02941176470588235,
+    "control_success_rate": 1.0,
+    "success_delta": -0.57,
+    "paired_delta_ci95": [
+      -0.66,
+      -0.47975000000000134
+    ]
+  },
+  {
+    "agent": "reset",
+    "strength": 0.5,
+    "maps": 100,
+    "success_rate": 0.43,
+    "success_ci95_low": 0.3373313900052838,
+    "success_ci95_high": 0.5278478830413564,
+    "mean_reward": 5.9200000000000035,
+    "steps_to_success": 34.0,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 15.0,
+    "mean_immediate_backtracks": 0.0,
+    "mean_keys_per_step": 0.02941176470588235,
+    "control_success_rate": 1.0,
+    "success_delta": -0.57,
+    "paired_delta_ci95": [
+      -0.66,
+      -0.47975000000000134
+    ]
+  },
+  {
+    "agent": "reset",
+    "strength": 0.75,
+    "maps": 100,
+    "success_rate": 0.43,
+    "success_ci95_low": 0.3373313900052838,
+    "success_ci95_high": 0.5278478830413564,
+    "mean_reward": 5.9200000000000035,
+    "steps_to_success": 34.0,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 15.0,
+    "mean_immediate_backtracks": 0.0,
+    "mean_keys_per_step": 0.02941176470588235,
+    "control_success_rate": 1.0,
+    "success_delta": -0.57,
+    "paired_delta_ci95": [
+      -0.66,
+      -0.47975000000000134
+    ]
+  },
+  {
+    "agent": "noise",
+    "strength": 0.0,
+    "maps": 100,
+    "success_rate": 1.0,
+    "success_ci95_low": 0.9630051925239981,
+    "success_ci95_high": 0.9999999999999999,
+    "mean_reward": 12.760000000000002,
+    "steps_to_success": 34.0,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 15.0,
+    "mean_immediate_backtracks": 0.0,
+    "mean_keys_per_step": 0.02941176470588235,
+    "control_success_rate": 1.0,
+    "success_delta": 0.0,
+    "paired_delta_ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "agent": "noise",
+    "strength": 0.1,
+    "maps": 100,
+    "success_rate": 1.0,
+    "success_ci95_low": 0.9630051925239981,
+    "success_ci95_high": 0.9999999999999999,
+    "mean_reward": 12.760000000000002,
+    "steps_to_success": 34.0,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 15.0,
+    "mean_immediate_backtracks": 0.0,
+    "mean_keys_per_step": 0.02941176470588235,
+    "control_success_rate": 1.0,
+    "success_delta": 0.0,
+    "paired_delta_ci95": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "agent": "noise",
+    "strength": 0.5,
+    "maps": 100,
+    "success_rate": 0.98,
+    "success_ci95_low": 0.9299868370580063,
+    "success_ci95_high": 0.9944981477650318,
+    "mean_reward": 12.520000000000003,
+    "steps_to_success": 34.0,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 15.0,
+    "mean_immediate_backtracks": 0.0,
+    "mean_keys_per_step": 0.02941176470588235,
+    "control_success_rate": 1.0,
+    "success_delta": -0.02,
+    "paired_delta_ci95": [
+      -0.05,
+      0.0
+    ]
+  },
+  {
+    "agent": "noise",
+    "strength": 1.0,
+    "maps": 100,
+    "success_rate": 0.86,
+    "success_ci95_low": 0.7786263961619276,
+    "success_ci95_high": 0.914737342455351,
+    "mean_reward": 11.080000000000002,
+    "steps_to_success": 34.0,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 15.0,
+    "mean_immediate_backtracks": 0.0,
+    "mean_keys_per_step": 0.02941176470588235,
+    "control_success_rate": 1.0,
+    "success_delta": -0.14,
+    "paired_delta_ci95": [
+      -0.21,
+      -0.08
+    ]
+  },
+  {
+    "agent": "noise",
+    "strength": 2.0,
+    "maps": 100,
+    "success_rate": 0.67,
+    "success_ci95_low": 0.5730516033971139,
+    "success_ci95_high": 0.7543701620610456,
+    "mean_reward": 8.800000000000002,
+    "steps_to_success": 34.0,
+    "mean_invalid_actions": 0.0,
+    "mean_repeated_visits": 15.0,
+    "mean_immediate_backtracks": 0.0,
+    "mean_keys_per_step": 0.02941176470588235,
+    "control_success_rate": 1.0,
+    "success_delta": -0.33,
+    "paired_delta_ci95": [
+      -0.42,
+      -0.24
+    ]
+  }
+]

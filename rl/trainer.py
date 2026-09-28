@@ -26,6 +26,8 @@ def train(agent="gru", seed=42, config_path=None, output=None, updates=None, mod
         cfg["updates"] = updates
     if mode:
         cfg["environment"]["mode"] = mode
+    if cfg["updates"] < 1 or cfg["batch_size"] < 1:
+        raise ValueError("Updates and batch size must be positive")
     seed_everything(seed)
     policy = Policy(PolicyConfig(agent=agent, **cfg.get("policy", {}))).to(device)
     ppo = PPOConfig(**cfg.get("ppo", {}))
@@ -51,6 +53,13 @@ def train(agent="gru", seed=42, config_path=None, output=None, updates=None, mod
         stats.update(update=iteration+1, timesteps=sum(m["steps"] for m in batch.metrics),
                      reward=float(np.mean([m["reward"] for m in batch.metrics])),
                      success=float(np.mean([m["success"] for m in batch.metrics])), dependency=current.dependency)
+        stats.update({"mean_"+key:float(np.mean([m[key] for m in batch.metrics]))
+                      for key in ("invalid_actions","repeated_visits","immediate_backtracks","keys_per_step")})
+        # Append raw metrics for reproducible post-hoc analysis. Large logs are
+        # local artifacts, not Git contents; the compact curves are versioned.
+        with (output/"episodes.jsonl").open("w" if iteration == 0 else "a") as handle:
+            for metric in batch.metrics:
+                handle.write(json.dumps({"update":iteration+1,**metric})+"\n")
         logs.append(stats)
         if (iteration+1) % 25 == 0 or iteration == 0:
             print(f"{agent} update {iteration+1}/{cfg['updates']} reward={stats['reward']:.2f} success={stats['success']:.1%}", flush=True)

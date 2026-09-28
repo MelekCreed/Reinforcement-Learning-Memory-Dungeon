@@ -1,0 +1,32 @@
+[
+  {
+    "path": "results/comparison/gru/checkpoint.pt",
+    "sha256": "f4a73c3ea066477908d77c95196d78f503290303482d59aae9d541fe5d65fd15",
+    "bytes": 143797
+  },
+  {
+    "path": "results/comparison/history/checkpoint.pt",
+    "sha256": "dd0f05db29cb59ec33c8248d6018a650986d7e0bd84035eff234695e0eaaed86",
+    "bytes": 97399
+  },
+  {
+    "path": "results/comparison/no_memory/checkpoint.pt",
+    "sha256": "5ee5d7c1c91af08e50112ede75380b7e205b75b5fac9d1c50f90999e40760406",
+    "bytes": 39543
+  },
+  {
+    "path": "results/showcase/gru/checkpoint.pt",
+    "sha256": "3587672deb4f95302a7615de6a9e16d112c4ca7ad200cd80d961c11f691cd769",
+    "bytes": 143861
+  },
+  {
+    "path": "results/showcase/history/checkpoint.pt",
+    "sha256": "c0624d767eeacb6c5e93358a92f42f88fa5c1cbfef5d9cf4d7cd4a47bb08938b",
+    "bytes": 97463
+  },
+  {
+    "path": "results/showcase/no_memory/checkpoint.pt",
+    "sha256": "c8af3f2167b6c6fae92171482e24934a4d0781d659cd4b9150a1e2745dd819bd",
+    "bytes": 39607
+  }
+]

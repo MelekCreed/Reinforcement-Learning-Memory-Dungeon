@@ -25,6 +25,8 @@ The recorded example uses seed **200001**, deletion after decision **8**, and di
 
 Demo recording slot: `docs/demo.gif` (optional future screen recording; no fabricated video is included). Real episode-state plots are already provided:
 
+[View the running dashboard capture](docs/dashboard.png).
+
 ![Control hidden state](results/ablation/hidden_control.png)
 ![Treatment hidden state](results/ablation/hidden_treatment.png)
 
@@ -56,11 +58,13 @@ streamlit run dashboard/app.py
 
 Open the local address printed by Streamlit, normally `http://localhost:8501`. Run commands from the repository root. For the exact tested library versions use `requirements-tested.txt` instead of `requirements.txt`. For CUDA, install the appropriate official PyTorch build and add `--device cuda` to training; GPU performance was not tested here.
 
-**Checkpoints are not committed.** They are included in the original local workspace. A fresh clone can inspect all published results immediately; train the three showcase policies to enable learned-agent replay:
+**Checkpoints are not committed.** They are included in the original local workspace and provided separately in the [v0.1.0 release](https://github.com/MelekCreed/Reinforcement-Learning-Memory-Dungeon/releases/tag/v0.1.0). Extract `Memory-Dungeon-checkpoints.zip` into the repository root to restore the six recorded policies. A fresh clone can inspect all recorded results immediately. Alternatively, train the three showcase policies:
 
 ```bash
 python experiments/compare_memory.py --config configs/showcase.json --root results/showcase --maps 100
 python experiments/ablation.py --checkpoint results/showcase/gru/checkpoint.pt --maps 100
+python experiments/cue_counterfactual.py --maps 30
+python experiments/report.py
 ```
 
 Until a checkpoint exists, the dashboard labels that architecture as an **untrained preview**. It never substitutes a scripted expert for a neural agent.
@@ -189,6 +193,7 @@ docs/           Banner, generated results, development record
 - Current graphs are grid-embedded trees. Cyclic maps, richer clue chains, multiple irreversible cues, and learned semantic map probes would increase realism.
 - Hidden-state deletion also shifts the model off its learned state distribution. Noise dose response and zero-noise controls help, but do not prove a uniquely localized symbolic memory.
 - The binary task permits chance success. No-memory is not expected to achieve zero success, and observed finite-sample rates need not equal exactly 50%.
+- All included dependency delays exceed the history-4 window. The flat history curve demonstrates failure beyond that window; it does not locate the transition from sufficient to insufficient context.
 - Full episodes are convenient for correct recurrent PPO but require memory proportional to horizon. A production-scale extension should use sequence minibatches with burn-in and carefully tested recurrent masks.
 - Future work: multiple training seeds, capacity-matched baselines, sparse-reward runs, sampled-policy evaluation, withheld topology families, a text-token encoder, and optional Transformer memory. These are extensions, not placeholder core implementations.
 
