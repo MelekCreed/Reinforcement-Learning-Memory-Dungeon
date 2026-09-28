@@ -1,0 +1,28 @@
+[
+  {
+    "loss": 2.761817693710327,
+    "policy_loss": -0.0005358179332688451,
+    "value_loss": 5.538163185119629,
+    "entropy": 0.6728076338768005,
+    "gradient_norm": 1.1890127658843994,
+    "approx_kl": 1.980568777071312e-05,
+    "update": 1,
+    "timesteps": 1122,
+    "reward": 4.5112499999999995,
+    "success": 0.4375,
+    "dependency": 8
+  },
+  {
+    "loss": 2.544374942779541,
+    "policy_loss": -0.0004402190388645977,
+    "value_loss": 5.103226661682129,
+    "entropy": 0.6798306703567505,
+    "gradient_norm": 0.7319101095199585,
+    "approx_kl": 1.3579335245594848e-05,
+    "update": 2,
+    "timesteps": 708,
+    "reward": 2.605,
+    "success": 0.25,
+    "dependency": 8
+  }
+]
