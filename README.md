@@ -58,7 +58,7 @@ streamlit run dashboard/app.py
 
 Open the local address printed by Streamlit, normally `http://localhost:8501`. Run commands from the repository root. For the exact tested library versions use `requirements-tested.txt` instead of `requirements.txt`. For CUDA, install the appropriate official PyTorch build and add `--device cuda` to training; GPU performance was not tested here.
 
-**Checkpoints are not committed.** They are included in the original local workspace and provided separately in the [v0.1.0 release](https://github.com/MelekCreed/Reinforcement-Learning-Memory-Dungeon/releases/tag/v0.1.0). Extract `Memory-Dungeon-checkpoints.zip` into the repository root to restore the six recorded policies. A fresh clone can inspect all recorded results immediately. Alternatively, train the three showcase policies:
+**Checkpoints are not committed.** They are included in the original local workspace and provided separately in the [v0.1.0 release](https://github.com/MoallaMelek/Reinforcement-Learning-Memory-Dungeon/releases/tag/v0.1.0). Extract `Memory-Dungeon-checkpoints.zip` into the repository root to restore the six recorded policies. A fresh clone can inspect all recorded results immediately. Alternatively, train the three showcase policies:
 
 ```bash
 python experiments/compare_memory.py --config configs/showcase.json --root results/showcase --maps 100
