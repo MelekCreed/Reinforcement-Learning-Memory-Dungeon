@@ -25,7 +25,7 @@ The recorded example uses seed **200001**, deletion after decision **8**, and di
 
 Demo recording slot: `docs/demo.gif` (optional future screen recording; no fabricated video is included). Real episode-state plots are already provided:
 
-[View the running dashboard capture](docs/dashboard.png).
+[View the running dashboard capture](docs/dashboard.png) or the [verified intervention screenshot](docs/intervention.png).
 
 ![Control hidden state](results/ablation/hidden_control.png)
 ![Treatment hidden state](results/ablation/hidden_treatment.png)
